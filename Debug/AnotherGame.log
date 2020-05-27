@@ -1,8 +1,2 @@
-﻿  pch.cpp
-  AnotherGame.cpp
-  AnotherGameDoc.cpp
-  AnotherGameView.cpp
-  CAnotherGameBoard.cpp
-  MainFrm.cpp
-  Создание кода...
-  AnotherGame.vcxproj -> D:\C++\AnotherGame\Debug\AnotherGame.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppClean.targets(76,5): warning : Процесс не может получить доступ к файлу "d:\c++\anothergame\debug\anothergame.pch", так как этот файл используется другим процессом.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(365,5): error MSB3061: Не удается удалить файл "Debug\AnotherGame.pch". Процесс не может получить доступ к файлу "D:\C++\AnotherGame\Debug\AnotherGame.pch", так как этот файл используется другим процессом.
