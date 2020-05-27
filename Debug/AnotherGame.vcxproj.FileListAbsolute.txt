@@ -1,0 +1,2 @@
+D:\C++\AnotherGame\Debug\AnotherGame.exe
+D:\C++\AnotherGame\Debug\AnotherGame.pdb
