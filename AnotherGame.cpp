@@ -1,51 +1,51 @@
 
-// SameGame.cpp : Defines the class behaviors for the application.
+// AnotherGame.cpp : Defines the class behaviors for the application.
 //
 
 #include "stdafx.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
-#include "SameGame.h"
+#include "AnotherGame.h"
 #include "MainFrm.h"
 
-#include "SameGameDoc.h"
-#include "SameGameView.h"
+#include "AnotherGameDoc.h"
+#include "AnotherGameView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CSameGameApp
+// CAnotherGameApp
 
-BEGIN_MESSAGE_MAP(CSameGameApp, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &CSameGameApp::OnAppAbout)
+BEGIN_MESSAGE_MAP(CAnotherGameApp, CWinApp)
+	ON_COMMAND(ID_APP_ABOUT, &CAnotherGameApp::OnAppAbout)
 	// Standard file based document commands
 	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
 END_MESSAGE_MAP()
 
 
-// CSameGameApp construction
+// CAnotherGameApp construction
 
-CSameGameApp::CSameGameApp() noexcept
+CAnotherGameApp::CAnotherGameApp() noexcept
 {
 	// TODO: replace application ID string below with unique ID string; recommended
 	// format for string is CompanyName.ProductName.SubProduct.VersionInformation
-	SetAppID(_T("SameGame.AppID.NoVersion"));
+	SetAppID(_T("AnotherGame.AppID.NoVersion"));
 
 	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
 }
 
-// The one and only CSameGameApp object
+// The one and only CAnotherGameApp object
 
-CSameGameApp theApp;
+CAnotherGameApp theApp;
 
 
-// CSameGameApp initialization
+// CAnotherGameApp initialization
 
-BOOL CSameGameApp::InitInstance()
+BOOL CAnotherGameApp::InitInstance()
 {
 	// InitCommonControlsEx() is required on Windows XP if an application
 	// manifest specifies use of ComCtl32.dll version 6 or later to enable
@@ -81,9 +81,9 @@ BOOL CSameGameApp::InitInstance()
 	CSingleDocTemplate* pDocTemplate;
 	pDocTemplate = new CSingleDocTemplate(
 		IDR_MAINFRAME,
-		RUNTIME_CLASS(CSameGameDoc),
+		RUNTIME_CLASS(CAnotherGameDoc),
 		RUNTIME_CLASS(CMainFrame),       // main SDI frame window
-		RUNTIME_CLASS(CSameGameView));
+		RUNTIME_CLASS(CAnotherGameView));
 	if (!pDocTemplate)
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
@@ -106,7 +106,7 @@ BOOL CSameGameApp::InitInstance()
 	return TRUE;
 }
 
-// CSameGameApp message handlers
+// CAnotherGameApp message handlers
 
 
 // CAboutDlg dialog used for App About
@@ -142,13 +142,13 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 // App command to run the dialog
-void CSameGameApp::OnAppAbout()
+void CAnotherGameApp::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// CSameGameApp message handlers
+// CAnotherGameApp message handlers
 
 
 

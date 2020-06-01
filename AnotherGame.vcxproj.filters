@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SameGame.h">
+    <ClInclude Include="AnotherGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
@@ -27,21 +27,21 @@
     <ClInclude Include="MainFrm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SameGameDoc.h">
+    <ClInclude Include="AnotherGameDoc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SameGameView.h">
+    <ClInclude Include="AnotherGameView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SameGameBoard.h">
+    <ClInclude Include="AnotherGameBoard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SameGame.cpp">
+    <ClCompile Include="AnotherGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
@@ -50,31 +50,31 @@
     <ClCompile Include="MainFrm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SameGameDoc.cpp">
+    <ClCompile Include="AnotherGameDoc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SameGameView.cpp">
+    <ClCompile Include="AnotherGameView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SameGameBoard.cpp">
+    <ClCompile Include="AnotherGameBoard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="SameGame.rc">
+    <ResourceCompile Include="AnotherGame.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\SameGame.rc2">
+    <None Include="res\AnotherGame.rc2">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\SameGameDoc.ico">
+    <Image Include="res\AnotherGameDoc.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\SameGame.ico">
+    <Image Include="res\AnotherGame.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

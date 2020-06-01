@@ -1,5 +1,5 @@
-﻿  SameGame.cpp
-  SameGameDoc.cpp
-  SameGameView.cpp
+﻿  AnotherGame.cpp
+  AnotherGameDoc.cpp
+  AnotherGameView.cpp
   Generating Code...
-  SameGame.vcxproj -> C:\dev\Debug\SameGame.exe
+  AnotherGame.vcxproj -> C:\dev\Debug\AnotherGame.exe

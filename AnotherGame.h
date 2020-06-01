@@ -1,5 +1,5 @@
 
-// SameGame.h : main header file for the SameGame application
+// AnotherGame.h : main header file for the AnotherGame application
 //
 #pragma once
 
@@ -10,14 +10,14 @@
 #include "resource.h"       // main symbols
 
 
-// CSameGameApp:
-// See SameGame.cpp for the implementation of this class
+// CAnotherGameApp:
+// See AnotherGame.cpp for the implementation of this class
 //
 
-class CSameGameApp : public CWinApp
+class CAnotherGameApp : public CWinApp
 {
 public:
-	CSameGameApp() noexcept;
+	CAnotherGameApp() noexcept;
 
 
 // Overrides
@@ -29,4 +29,4 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-extern CSameGameApp theApp;
+extern CAnotherGameApp theApp;

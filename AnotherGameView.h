@@ -1,19 +1,19 @@
 
-// SameGameView.h : interface of the CSameGameView class
+// AnotherGameView.h : interface of the CAnotherGameView class
 //
 
 #pragma once
 
 
-class CSameGameView : public CView
+class CAnotherGameView : public CView
 {
 protected: // create from serialization only
-	CSameGameView() noexcept;
-	DECLARE_DYNCREATE(CSameGameView)
+	CAnotherGameView() noexcept;
+	DECLARE_DYNCREATE(CAnotherGameView)
 
 // Attributes
 public:
-	CSameGameDoc* GetDocument() const;
+	CAnotherGameDoc* GetDocument() const;
 
 // Operations
 public:
@@ -28,7 +28,7 @@ protected:
 public:
 	void ResizeWindow();
 
-	virtual ~CSameGameView();
+	virtual ~CAnotherGameView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -43,8 +43,8 @@ public:
 	virtual void OnInitialUpdate();
 };
 
-#ifndef _DEBUG  // debug version in SameGameView.cpp
-inline CSameGameDoc* CSameGameView::GetDocument() const
-   { return reinterpret_cast<CSameGameDoc*>(m_pDocument); }
+#ifndef _DEBUG  // debug version in AnotherGameView.cpp
+inline CAnotherGameDoc* CAnotherGameView::GetDocument() const
+   { return reinterpret_cast<CAnotherGameDoc*>(m_pDocument); }
 #endif
 

@@ -1,12 +1,12 @@
 #pragma once
 
-class CSameGameBoard
+class CAnotherGameBoard
 {
 public:
 	/*  Default Constructor */
-	CSameGameBoard(void);
+	CAnotherGameBoard(void);
 	/*  Destructor */
-	~CSameGameBoard(void);
+	~CAnotherGameBoard(void);
 	/*  Function to randomly setup the board */
 	void SetupBoard(void);
 	/*  Get the color at a particular location */

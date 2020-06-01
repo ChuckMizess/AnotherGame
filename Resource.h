@@ -1,10 +1,10 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by SameGame.rc
+// Used by AnotherGame.rc
 //
 #define IDD_ABOUTBOX				100
 #define IDR_MAINFRAME				128
-#define IDR_SameGameTYPE				130
+#define IDR_AnotherGameTYPE				130
 
 // Next default values for new objects
 //

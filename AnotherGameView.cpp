@@ -1,42 +1,42 @@
 
-// SameGameView.cpp : implementation of the CSameGameView class
+// AnotherGameView.cpp : implementation of the CAnotherGameView class
 //
 
 #include "stdafx.h"
 // SHARED_HANDLERS can be defined in an ATL project implementing preview, thumbnail
 // and search filter handlers and allows sharing of document code with that project.
 #ifndef SHARED_HANDLERS
-#include "SameGame.h"
+#include "AnotherGame.h"
 #endif
 
-#include "SameGameDoc.h"
-#include "SameGameView.h"
+#include "AnotherGameDoc.h"
+#include "AnotherGameView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CSameGameView
+// CAnotherGameView
 
-IMPLEMENT_DYNCREATE(CSameGameView, CView)
+IMPLEMENT_DYNCREATE(CAnotherGameView, CView)
 
-BEGIN_MESSAGE_MAP(CSameGameView, CView)
+BEGIN_MESSAGE_MAP(CAnotherGameView, CView)
 END_MESSAGE_MAP()
 
-// CSameGameView construction/destruction
+// CAnotherGameView construction/destruction
 
-CSameGameView::CSameGameView() noexcept
+CAnotherGameView::CAnotherGameView() noexcept
 {
 	// TODO: add construction code here
 
 }
 
-CSameGameView::~CSameGameView()
+CAnotherGameView::~CAnotherGameView()
 {
 }
 
-BOOL CSameGameView::PreCreateWindow(CREATESTRUCT& cs)
+BOOL CAnotherGameView::PreCreateWindow(CREATESTRUCT& cs)
 {
 	// TODO: Modify the Window class or styles here by modifying
 	//  the CREATESTRUCT cs
@@ -46,14 +46,14 @@ BOOL CSameGameView::PreCreateWindow(CREATESTRUCT& cs)
 
 
 
-// CSameGameView drawing
+// CAnotherGameView drawing
 
-// CSameGameView drawing
+// CAnotherGameView drawing
 
-void CSameGameView::OnDraw(CDC* pDC) // MFC will comment out the argument name by default; uncomment it
+void CAnotherGameView::OnDraw(CDC* pDC) // MFC will comment out the argument name by default; uncomment it
 {
 	//  First get a pointer to the document
-	CSameGameDoc* pDoc = GetDocument();
+	CAnotherGameDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
@@ -95,31 +95,31 @@ void CSameGameView::OnDraw(CDC* pDC) // MFC will comment out the argument name b
 }
 
 
-// CSameGameView diagnostics
+// CAnotherGameView diagnostics
 
 #ifdef _DEBUG
-void CSameGameView::AssertValid() const
+void CAnotherGameView::AssertValid() const
 {
 	CView::AssertValid();
 }
 
-void CSameGameView::Dump(CDumpContext& dc) const
+void CAnotherGameView::Dump(CDumpContext& dc) const
 {
 	CView::Dump(dc);
 }
 
-CSameGameDoc* CSameGameView::GetDocument() const // non-debug version is inline
+CAnotherGameDoc* CAnotherGameView::GetDocument() const // non-debug version is inline
 {
-	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CSameGameDoc)));
-	return (CSameGameDoc*)m_pDocument;
+	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CAnotherGameDoc)));
+	return (CAnotherGameDoc*)m_pDocument;
 }
 #endif //_DEBUG
 
 
-// CSameGameView message handlers
+// CAnotherGameView message handlers
 
 
-void CSameGameView::OnInitialUpdate()
+void CAnotherGameView::OnInitialUpdate()
 {
 	CView::OnInitialUpdate();
 	//  Resize the window
@@ -127,10 +127,10 @@ void CSameGameView::OnInitialUpdate()
 	// TODO: Add your specialized code here and/or call the base class
 }
 
-void CSameGameView::ResizeWindow()
+void CAnotherGameView::ResizeWindow()
 {
 	//  First get a pointer to the document
-	CSameGameDoc* pDoc = GetDocument();
+	CAnotherGameDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;

@@ -1,7 +1,7 @@
 #include "StdAfx.h"
-#include "SameGameBoard.h"
+#include "AnotherGameBoard.h"
 
-CSameGameBoard::CSameGameBoard(void)
+CAnotherGameBoard::CAnotherGameBoard(void)
 	: m_arrBoard(NULL),
 	m_nColumns(15), m_nRows(15),
 	m_nHeight(35), m_nWidth(35)
@@ -12,13 +12,13 @@ CSameGameBoard::CSameGameBoard(void)
 	m_arrColors[3] = RGB(0, 0, 255);
 }
 
-CSameGameBoard::~CSameGameBoard(void)
+CAnotherGameBoard::~CAnotherGameBoard(void)
 {
 	//  Simply delete the board
 	DeleteBoard();
 }
 
-void CSameGameBoard::SetupBoard(void)
+void CAnotherGameBoard::SetupBoard(void)
 {
 	//  Create the board if needed
 	if (m_arrBoard == NULL)
@@ -29,7 +29,7 @@ void CSameGameBoard::SetupBoard(void)
 			m_arrBoard[row][col] = (rand() % 3) + 1;
 }
 
-COLORREF CSameGameBoard::GetBoardSpace(int row, int col)
+COLORREF CAnotherGameBoard::GetBoardSpace(int row, int col)
 {
 	//  Check the bounds of the array
 	if (row < 0 || row >= m_nRows || col < 0 || col >= m_nColumns)
@@ -37,7 +37,7 @@ COLORREF CSameGameBoard::GetBoardSpace(int row, int col)
 	return m_arrColors[m_arrBoard[row][col]];
 }
 
-void CSameGameBoard::DeleteBoard(void)
+void CAnotherGameBoard::DeleteBoard(void)
 {
 	//  Don't delete a NULL board
 	if (m_arrBoard != NULL)
@@ -57,7 +57,7 @@ void CSameGameBoard::DeleteBoard(void)
 	}
 }
 
-void CSameGameBoard::CreateBoard(void)
+void CAnotherGameBoard::CreateBoard(void)
 {
 	//  If there is already a board, delete it
 	if (m_arrBoard != NULL)

@@ -1,15 +1,15 @@
 
-// SameGameDoc.cpp : implementation of the CSameGameDoc class
+// AnotherGameDoc.cpp : implementation of the CAnotherGameDoc class
 //
 
 #include "stdafx.h"
 // SHARED_HANDLERS can be defined in an ATL project implementing preview, thumbnail
 // and search filter handlers and allows sharing of document code with that project.
 #ifndef SHARED_HANDLERS
-#include "SameGame.h"
+#include "AnotherGame.h"
 #endif
 
-#include "SameGameDoc.h"
+#include "AnotherGameDoc.h"
 
 #include <propkey.h>
 
@@ -17,27 +17,27 @@
 #define new DEBUG_NEW
 #endif
 
-// CSameGameDoc
+// CAnotherGameDoc
 
-IMPLEMENT_DYNCREATE(CSameGameDoc, CDocument)
+IMPLEMENT_DYNCREATE(CAnotherGameDoc, CDocument)
 
-BEGIN_MESSAGE_MAP(CSameGameDoc, CDocument)
+BEGIN_MESSAGE_MAP(CAnotherGameDoc, CDocument)
 END_MESSAGE_MAP()
 
 
-// CSameGameDoc construction/destruction
+// CAnotherGameDoc construction/destruction
 
-CSameGameDoc::CSameGameDoc() noexcept
+CAnotherGameDoc::CAnotherGameDoc() noexcept
 {
 	// TODO: add one-time construction code here
 
 }
 
-CSameGameDoc::~CSameGameDoc()
+CAnotherGameDoc::~CAnotherGameDoc()
 {
 }
 
-BOOL CSameGameDoc::OnNewDocument()
+BOOL CAnotherGameDoc::OnNewDocument()
 {
 	if (!CDocument::OnNewDocument())
 		return FALSE;
@@ -53,9 +53,9 @@ BOOL CSameGameDoc::OnNewDocument()
 
 
 
-// CSameGameDoc serialization
+// CAnotherGameDoc serialization
 
-void CSameGameDoc::Serialize(CArchive& ar)
+void CAnotherGameDoc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
@@ -70,7 +70,7 @@ void CSameGameDoc::Serialize(CArchive& ar)
 #ifdef SHARED_HANDLERS
 
 // Support for thumbnails
-void CSameGameDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
+void CAnotherGameDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 {
 	// Modify this code to draw the document's data
 	dc.FillSolidRect(lprcBounds, RGB(255, 255, 255));
@@ -91,7 +91,7 @@ void CSameGameDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 }
 
 // Support for Search Handlers
-void CSameGameDoc::InitializeSearchContent()
+void CAnotherGameDoc::InitializeSearchContent()
 {
 	CString strSearchContent;
 	// Set search contents from document's data.
@@ -101,7 +101,7 @@ void CSameGameDoc::InitializeSearchContent()
 	SetSearchContent(strSearchContent);
 }
 
-void CSameGameDoc::SetSearchContent(const CString& value)
+void CAnotherGameDoc::SetSearchContent(const CString& value)
 {
 	if (value.IsEmpty())
 	{
@@ -121,19 +121,19 @@ void CSameGameDoc::SetSearchContent(const CString& value)
 
 #endif // SHARED_HANDLERS
 
-// CSameGameDoc diagnostics
+// CAnotherGameDoc diagnostics
 
 #ifdef _DEBUG
-void CSameGameDoc::AssertValid() const
+void CAnotherGameDoc::AssertValid() const
 {
 	CDocument::AssertValid();
 }
 
-void CSameGameDoc::Dump(CDumpContext& dc) const
+void CAnotherGameDoc::Dump(CDumpContext& dc) const
 {
 	CDocument::Dump(dc);
 }
 #endif //_DEBUG
 
 
-// CSameGameDoc commands
+// CAnotherGameDoc commands

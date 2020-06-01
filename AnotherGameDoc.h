@@ -1,16 +1,16 @@
 
-// SameGameDoc.h : interface of the CSameGameDoc class
+// AnotherGameDoc.h : interface of the CAnotherGameDoc class
 //
 
 
 #pragma once
-#include "SameGameBoard.h"
+#include "AnotherGameBoard.h"
 
-class CSameGameDoc : public CDocument
+class CAnotherGameDoc : public CDocument
 {
 protected: // create from serialization only
-	CSameGameDoc() noexcept;
-	DECLARE_DYNCREATE(CSameGameDoc)
+	CAnotherGameDoc() noexcept;
+	DECLARE_DYNCREATE(CAnotherGameDoc)
 
 // Attributes
 public:
@@ -40,7 +40,7 @@ public:
 
 // Implementation
 public:
-	virtual ~CSameGameDoc();
+	virtual ~CAnotherGameDoc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -48,7 +48,7 @@ public:
 
 protected:
 	/*  Instance of the game board */
-	CSameGameBoard m_board;
+	CAnotherGameBoard m_board;
 
 
 // Generated message map functions

@@ -3,7 +3,7 @@
 //
 
 #include "stdafx.h"
-#include "SameGame.h"
+#include "AnotherGame.h"
 
 #include "MainFrm.h"
 
