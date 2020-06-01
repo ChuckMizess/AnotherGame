@@ -1,10 +1,9 @@
-﻿
-// MainFrm.cpp: реализация класса CMainFrame
+
+// MainFrm.cpp : implementation of the CMainFrame class
 //
 
-#include "pch.h"
-#include "framework.h"
-#include "AnotherGame.h"
+#include "stdafx.h"
+#include "SameGame.h"
 
 #include "MainFrm.h"
 
@@ -19,11 +18,11 @@ IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)
 BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 END_MESSAGE_MAP()
 
-// Создание или уничтожение CMainFrame
+// CMainFrame construction/destruction
 
 CMainFrame::CMainFrame() noexcept
 {
-	// TODO: добавьте код инициализации члена
+	// TODO: add member initialization code here
 }
 
 CMainFrame::~CMainFrame()
@@ -34,8 +33,8 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 {
 	if( !CFrameWnd::PreCreateWindow(cs) )
 		return FALSE;
-	// TODO: изменить класс Window или стили посредством изменения
-	//  CREATESTRUCT cs
+	// TODO: Modify the Window class or styles here by modifying
+	//  the CREATESTRUCT cs
 
 	cs.style = WS_OVERLAPPED | WS_CAPTION | FWS_ADDTOTITLE
 		 | WS_MINIMIZEBOX | WS_SYSMENU;
@@ -43,7 +42,7 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 	return TRUE;
 }
 
-// Диагностика CMainFrame
+// CMainFrame diagnostics
 
 #ifdef _DEBUG
 void CMainFrame::AssertValid() const
@@ -58,5 +57,5 @@ void CMainFrame::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 
-// Обработчики сообщений CMainFrame
+// CMainFrame message handlers
 

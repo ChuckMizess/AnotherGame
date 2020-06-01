@@ -1,21 +1,23 @@
-﻿#pragma once
 
-#include "CAnotherGameBoard.h"
+// SameGameDoc.h : interface of the CSameGameDoc class
+//
 
-class CAnotherGameBoard : public CDocument
+
+#pragma once
+#include "SameGameBoard.h"
+
+class CSameGameDoc : public CDocument
 {
-protected: // создаём только из сериализации
-	CAnotherGameBoard();
-	virtual ~CAnotherGameBoard();
-	DECLARE_DYNCREATE(CAnotherGameBoard)
+protected: // create from serialization only
+	CSameGameDoc() noexcept;
+	DECLARE_DYNCREATE(CSameGameDoc)
 
-	// Атрибуты
+// Attributes
 public:
 
-	// Операции
+// Operations
 public:
-
-	// Геттеры для получения информации о параметрах игрового поля
+	/*  Functions for accessing the game board */
 	COLORREF GetBoardSpace(int row, int col)
 	{
 		return m_board.GetBoardSpace(row, col);
@@ -27,43 +29,7 @@ public:
 	int GetRows(void) { return m_board.GetRows(); }
 	void DeleteBoard(void) { m_board.DeleteBoard(); }
 
-
-	// Переопределения
-public:
-	virtual BOOL OnNewDocument();
-
-protected:
-	// Экземпляр объекта нашей игровой доски
-	CAnotherGameBoard m_board;
-
-
-	// Генерация функции сообщений 
-protected:
-	DECLARE_MESSAGE_MAP()
-};
-
-
-
-// AnotherGameDoc.h: интерфейс класса CAnotherGameDoc 
-//
-
-
-#pragma once
-
-
-class CAnotherGameDoc : public CDocument
-{
-protected: // создать только из сериализации
-	CAnotherGameDoc() noexcept;
-	DECLARE_DYNCREATE(CAnotherGameDoc)
-
-// Атрибуты
-public:
-
-// Операции
-public:
-
-// Переопределение
+// Overrides
 public:
 	virtual BOOL OnNewDocument();
 	virtual void Serialize(CArchive& ar);
@@ -72,26 +38,25 @@ public:
 	virtual void OnDrawThumbnail(CDC& dc, LPRECT lprcBounds);
 #endif // SHARED_HANDLERS
 
-// Реализация
+// Implementation
 public:
-	virtual ~CAnotherGameDoc();
+	virtual ~CSameGameDoc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
 protected:
+	/*  Instance of the game board */
+	CSameGameBoard m_board;
 
-// Созданные функции схемы сообщений
+
+// Generated message map functions
 protected:
 	DECLARE_MESSAGE_MAP()
 
 #ifdef SHARED_HANDLERS
-	// Вспомогательная функция, задающая содержимое поиска для обработчика поиска
+	// Helper function that sets search content for a Search Handler
 	void SetSearchContent(const CString& value);
 #endif // SHARED_HANDLERS
-};
-
-class AnotherGameDoc
-{
 };

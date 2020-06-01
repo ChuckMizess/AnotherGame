@@ -1,5 +1,5 @@
-﻿
-// MainFrm.h: интерфейс класса CMainFrame
+
+// MainFrm.h : interface of the CMainFrame class
 //
 
 #pragma once
@@ -7,21 +7,21 @@
 class CMainFrame : public CFrameWnd
 {
 	
-protected: // создать только из сериализации
+protected: // create from serialization only
 	CMainFrame() noexcept;
 	DECLARE_DYNCREATE(CMainFrame)
 
-// Атрибуты
+// Attributes
 public:
 
-// Операции
+// Operations
 public:
 
-// Переопределение
+// Overrides
 public:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
-// Реализация
+// Implementation
 public:
 	virtual ~CMainFrame();
 #ifdef _DEBUG
@@ -30,7 +30,7 @@ public:
 #endif
 
 
-// Созданные функции схемы сообщений
+// Generated message map functions
 protected:
 	DECLARE_MESSAGE_MAP()
 

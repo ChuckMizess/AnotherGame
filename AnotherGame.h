@@ -1,32 +1,32 @@
-﻿
-// AnotherGame.h: основной файл заголовка для приложения AnotherGame
+
+// SameGame.h : main header file for the SameGame application
 //
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error "включить pch.h до включения этого файла в PCH"
+	#error "include 'stdafx.h' before including this file for PCH"
 #endif
 
-#include "resource.h"       // основные символы
+#include "resource.h"       // main symbols
 
 
-// CAnotherGameApp:
-// Сведения о реализации этого класса: AnotherGame.cpp
+// CSameGameApp:
+// See SameGame.cpp for the implementation of this class
 //
 
-class CAnotherGameApp : public CWinApp
+class CSameGameApp : public CWinApp
 {
 public:
-	CAnotherGameApp() noexcept;
+	CSameGameApp() noexcept;
 
 
-// Переопределение
+// Overrides
 public:
 	virtual BOOL InitInstance();
 
-// Реализация
+// Implementation
 	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
 };
 
-extern CAnotherGameApp theApp;
+extern CSameGameApp theApp;

@@ -1,60 +1,59 @@
-﻿
-// AnotherGame.cpp: определяет поведение классов для приложения.
+
+// SameGame.cpp : Defines the class behaviors for the application.
 //
 
-#include "pch.h"
-#include "framework.h"
+#include "stdafx.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
-#include "AnotherGame.h"
+#include "SameGame.h"
 #include "MainFrm.h"
 
-#include "AnotherGameDoc.h"
-#include "AnotherGameView.h"
+#include "SameGameDoc.h"
+#include "SameGameView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CAnotherGameApp
+// CSameGameApp
 
-BEGIN_MESSAGE_MAP(CAnotherGameApp, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &CAnotherGameApp::OnAppAbout)
-	// Стандартные команды по работе с файлами документов
+BEGIN_MESSAGE_MAP(CSameGameApp, CWinApp)
+	ON_COMMAND(ID_APP_ABOUT, &CSameGameApp::OnAppAbout)
+	// Standard file based document commands
 	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
 END_MESSAGE_MAP()
 
 
-// Создание CAnotherGameApp
+// CSameGameApp construction
 
-CAnotherGameApp::CAnotherGameApp() noexcept
+CSameGameApp::CSameGameApp() noexcept
 {
-	// TODO: замените ниже строку идентификатора приложения строкой уникального идентификатора; рекомендуемый
-	// формат для строки: ИмяКомпании.ИмяПродукта.СубПродукт.СведенияОВерсии
-	SetAppID(_T("AnotherGame.AppID.NoVersion"));
+	// TODO: replace application ID string below with unique ID string; recommended
+	// format for string is CompanyName.ProductName.SubProduct.VersionInformation
+	SetAppID(_T("SameGame.AppID.NoVersion"));
 
-	// TODO: добавьте код создания,
-	// Размещает весь важный код инициализации в InitInstance
+	// TODO: add construction code here,
+	// Place all significant initialization in InitInstance
 }
 
-// Единственный объект CAnotherGameApp
+// The one and only CSameGameApp object
 
-CAnotherGameApp theApp;
+CSameGameApp theApp;
 
 
-// Инициализация CAnotherGameApp
+// CSameGameApp initialization
 
-BOOL CAnotherGameApp::InitInstance()
+BOOL CSameGameApp::InitInstance()
 {
-	// InitCommonControlsEx() требуются для Windows XP, если манифест
-	// приложения использует ComCtl32.dll версии 6 или более поздней версии для включения
-	// стилей отображения.  В противном случае будет возникать сбой при создании любого окна.
+	// InitCommonControlsEx() is required on Windows XP if an application
+	// manifest specifies use of ComCtl32.dll version 6 or later to enable
+	// visual styles.  Otherwise, any window creation will fail.
 	INITCOMMONCONTROLSEX InitCtrls;
 	InitCtrls.dwSize = sizeof(InitCtrls);
-	// Выберите этот параметр для включения всех общих классов управления, которые необходимо использовать
-	// в вашем приложении.
+	// Set this to include all the common control classes you want to use
+	// in your application.
 	InitCtrls.dwICC = ICC_WIN95_CLASSES;
 	InitCommonControlsEx(&InitCtrls);
 
@@ -63,72 +62,69 @@ BOOL CAnotherGameApp::InitInstance()
 
 	EnableTaskbarInteraction(FALSE);
 
-	// Для использования элемента управления RichEdit требуется метод AfxInitRichEdit2()
+	// AfxInitRichEdit2() is required to use RichEdit control
 	// AfxInitRichEdit2();
 
-	// Стандартная инициализация
-	// Если эти возможности не используются и необходимо уменьшить размер
-	// конечного исполняемого файла, необходимо удалить из следующего
-	// конкретные процедуры инициализации, которые не требуются
-	// Измените раздел реестра, в котором хранятся параметры
-	// TODO: следует изменить эту строку на что-нибудь подходящее,
-	// например на название организации
-	SetRegistryKey(_T("Локальные приложения, созданные с помощью мастера приложений"));
-	LoadStdProfileSettings(4);  // Загрузите стандартные параметры INI-файла (включая MRU)
+	// Standard initialization
+	// If you are not using these features and wish to reduce the size
+	// of your final executable, you should remove from the following
+	// the specific initialization routines you do not need
+	// Change the registry key under which our settings are stored
+	// TODO: You should modify this string to be something appropriate
+	// such as the name of your company or organization
+	SetRegistryKey(_T("Local AppWizard-Generated Applications"));
+	LoadStdProfileSettings(4);  // Load standard INI file options (including MRU)
 
 
-	// Зарегистрируйте шаблоны документов приложения.  Шаблоны документов
-	//  выступают в роли посредника между документами, окнами рамок и представлениями
+	// Register the application's document templates.  Document templates
+	//  serve as the connection between documents, frame windows and views
 	CSingleDocTemplate* pDocTemplate;
 	pDocTemplate = new CSingleDocTemplate(
 		IDR_MAINFRAME,
-		RUNTIME_CLASS(CAnotherGameDoc),
-		RUNTIME_CLASS(CMainFrame),       // основное окно рамки SDI
-		RUNTIME_CLASS(CAnotherGameView));
+		RUNTIME_CLASS(CSameGameDoc),
+		RUNTIME_CLASS(CMainFrame),       // main SDI frame window
+		RUNTIME_CLASS(CSameGameView));
 	if (!pDocTemplate)
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
 
 
-	// Разрешить использование расширенных символов в горячих клавишах меню
-	CMFCToolBar::m_bExtCharTranslation = TRUE;
-
-	// Синтаксический разбор командной строки на стандартные команды оболочки, DDE, открытие файлов
+	// Parse command line for standard shell commands, DDE, file open
 	CCommandLineInfo cmdInfo;
 	ParseCommandLine(cmdInfo);
 
 
 
-	// Команды диспетчеризации, указанные в командной строке.  Значение FALSE будет возвращено, если
-	// приложение было запущено с параметром /RegServer, /Register, /Unregserver или /Unregister.
+	// Dispatch commands specified on the command line.  Will return FALSE if
+	// app was launched with /RegServer, /Register, /Unregserver or /Unregister.
 	if (!ProcessShellCommand(cmdInfo))
 		return FALSE;
 
-	// Одно и только одно окно было инициализировано, поэтому отобразите и обновите его
+	// The one and only window has been initialized, so show and update it
 	m_pMainWnd->ShowWindow(SW_SHOW);
 	m_pMainWnd->UpdateWindow();
 	return TRUE;
 }
 
-// Обработчики сообщений CAnotherGameApp
+// CSameGameApp message handlers
 
 
-// Диалоговое окно CAboutDlg используется для описания сведений о приложении
+// CAboutDlg dialog used for App About
 
 class CAboutDlg : public CDialogEx
 {
 public:
 	CAboutDlg() noexcept;
 
-// Данные диалогового окна
+// Dialog Data
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_ABOUTBOX };
 #endif
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // поддержка DDX/DDV
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 
-// Реализация
+// Implementation
 protected:
 	DECLARE_MESSAGE_MAP()
 };
@@ -145,14 +141,14 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
-// Команда приложения для запуска диалога
-void CAnotherGameApp::OnAppAbout()
+// App command to run the dialog
+void CSameGameApp::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// Обработчики сообщений CAnotherGameApp
+// CSameGameApp message handlers
 
 
 

@@ -1,12 +1,12 @@
-﻿//{{NO_DEPENDENCIES}}
-// Включаемый файл, созданный в Microsoft Visual C++.
-// Используется в AnotherGame.rc
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by SameGame.rc
 //
 #define IDD_ABOUTBOX				100
 #define IDR_MAINFRAME				128
-#define IDR_AnotherGameTYPE				130
+#define IDR_SameGameTYPE				130
 
-// Следующие стандартные значения для новых объектов
+// Next default values for new objects
 //
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS

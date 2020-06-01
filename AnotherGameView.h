@@ -1,32 +1,34 @@
-﻿
-// AnotherGameView.h: интерфейс класса CAnotherGameView
+
+// SameGameView.h : interface of the CSameGameView class
 //
 
 #pragma once
 
 
-class CAnotherGameView : public CView
+class CSameGameView : public CView
 {
-protected: // создать только из сериализации
-	CAnotherGameView() noexcept;
-	DECLARE_DYNCREATE(CAnotherGameView)
+protected: // create from serialization only
+	CSameGameView() noexcept;
+	DECLARE_DYNCREATE(CSameGameView)
 
-// Атрибуты
+// Attributes
 public:
-	CAnotherGameDoc* GetDocument() const;
+	CSameGameDoc* GetDocument() const;
 
-// Операции
+// Operations
 public:
 
-// Переопределение
+// Overrides
 public:
-	virtual void OnDraw(CDC* pDC);  // переопределено для отрисовки этого представления
+	virtual void OnDraw(CDC* pDC);  // overridden to draw this view
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 protected:
 
-// Реализация
+// Implementation
 public:
-	virtual ~CAnotherGameView();
+	void ResizeWindow();
+
+	virtual ~CSameGameView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -34,13 +36,15 @@ public:
 
 protected:
 
-// Созданные функции схемы сообщений
+// Generated message map functions
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	virtual void OnInitialUpdate();
 };
 
-#ifndef _DEBUG  // версия отладки в AnotherGameView.cpp
-inline CAnotherGameDoc* CAnotherGameView::GetDocument() const
-   { return reinterpret_cast<CAnotherGameDoc*>(m_pDocument); }
+#ifndef _DEBUG  // debug version in SameGameView.cpp
+inline CSameGameDoc* CSameGameView::GetDocument() const
+   { return reinterpret_cast<CSameGameDoc*>(m_pDocument); }
 #endif
 
