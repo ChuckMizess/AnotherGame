@@ -1,0 +1,40 @@
+{
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-v",
+                "main.cpp",
+                "-IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include",
+                "-LC:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib",
+                "-libQt5Core",
+                "-libQt5Multimedia",
+                
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "g++.exe build active file",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

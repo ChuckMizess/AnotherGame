@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Win64",
+            "compilerPath": "C:/Qt/Qt5.14.2/Tools/mingw730_64/bin/g++.exe",
+            "includePath": [
+                
+                "C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include",
+                "C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtMultimedia",
+                "C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore",
+                "C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/**",
+                "${workspaceFolder}/**"
+            ],
+            
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

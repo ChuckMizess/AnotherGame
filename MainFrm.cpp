@@ -2,7 +2,7 @@
 // MainFrm.cpp : implementation of the CMainFrame class
 //
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "AnotherGame.h"
 
 #include "MainFrm.h"

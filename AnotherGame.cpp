@@ -2,7 +2,7 @@
 // AnotherGame.cpp : Defines the class behaviors for the application.
 //
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
 #include "AnotherGame.h"
